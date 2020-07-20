@@ -71,6 +71,11 @@ passport.deserializeUser(User.deserializeUser());
 
 //Signup  - Register
 
+// app.use(function(req, res, next){
+// 	res.locals.currentuser = req.user;
+// 	next();
+// });
+
 
 
 
@@ -277,7 +282,6 @@ app.get("/animelist", isLoggedIn, function(req, res){
 	Anime.find({}, function(err, list){
 		if(err){ console.log(err);}
 		else{
-			res.render("animelist", {list, list});
 		}
 	});
 });
