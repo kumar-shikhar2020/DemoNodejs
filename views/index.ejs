@@ -1,0 +1,27 @@
+
+
+<h1> WELCOME TO THE ANIME LAND</h1>
+
+
+<a href="/animelist"> View ANIME LIST</a>
+
+<%if(!currentuser){%>
+
+<button><a href="/login"><strong><h5>LOGIN</h5></strong></a></button>
+<button><a href="/register"><strong><h5>REGISTER</h5></strong></a></button>
+
+<%}else{%>
+
+<button><a href="/logout"><strong><h5>LOGOUT</h5></strong></a></button>
+
+<%}%>
+
+<% userlist.forEach(function(user){ %>
+	<% if(user.login == true){ %>
+		<div>
+		<h2> <%= user.username%></h2><br>
+		</div>
+	<%}%>
+<%});%>
+
+

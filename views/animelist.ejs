@@ -1,0 +1,14 @@
+
+<div align="center"><h1> Animes at your serveice </h1>   <button><a href="/"> GO BACK </a></button></div>
+
+
+<a href="/animelist/new"> Add new Anime Post</a>
+
+<% list.forEach(function(itr){ %>
+
+	<div>
+	<h2> <%= itr.title %></h2>
+	<img src = "<%= itr.image %>">
+	<div><p><a href="/animelist/<%=itr._id%>"> More INFO </a></p></div>	
+	</div>
+<%});%>
